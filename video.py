@@ -23,7 +23,7 @@ for filename in sorted(glob.glob(str(path) + "*.png"), key=lambda x:float(re.fin
 
 
 
-out = cv2.VideoWriter(export_path + export_name + ".avi",cv2.VideoWriter_fourcc(*'DIVX'), 10, size)
+out = cv2.VideoWriter(export_path + export_name + ".avi",cv2.VideoWriter_fourcc(*'DIVX'), FPS, size)
 
 for i in range(len(img_array)):
     out.write(img_array[i])
