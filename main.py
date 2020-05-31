@@ -94,7 +94,7 @@ def main():
         for i in range(1, len(coords) - 1):
 
             angle = getangle(coords[i - 1], coords[i + 1]) #Gets angle between the actual point and the next one
-            pool.submit(get_image, "test_directionNice_" + str(index) + "_rot=" + str(angle) + ".png",make_url(coords[i], rot=str(angle)))
+            pool.submit(get_image, "image_" + str(index) + "_rot=" + str(angle) + ".png",make_url(coords[i], rot=str(angle)))
             index += 1
 
     elif angle_mode == "sharp":
@@ -102,7 +102,7 @@ def main():
             for i in range(len(coords) - 1):
 
                 angle = getangle(coords[i], coords[i + 1]) #Gets angle between the actual point and the next one
-                pool.submit(get_image, "test_directionNice_" + str(index) + "_rot=" + str(angle) + ".png",make_url(coords[i], rot=str(angle)))
+                pool.submit(get_image, "image_" + str(index) + "_rot=" + str(angle) + ".png",make_url(coords[i], rot=str(angle)))
                 index += 1
             
 
